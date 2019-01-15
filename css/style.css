@@ -85,6 +85,12 @@ h4					{font-family:Centaur;
 					font-size: 35px;
 					}
 
+h5					{font-family:Raleway;
+					text-align: center;
+					color:#dfdfdf;
+					font-size: 29px;
+					}
+
 .image				{border-radius: 60%;
 					}
 
@@ -184,6 +190,21 @@ footer				{position:bottom;
 
 
 /* Full-width input fields */
+form a:hover  {
+    color: #6D9C91;
+    transition: all 0.4s ease-in-out;
+}
+
+form a  {
+    color: #b4a892; 
+    text-decoration: none;
+}
+
+form    { 
+display: block;
+margin-top: 0em;
+}
+
 form    {
 display: block;
 margin-top: 0em;
