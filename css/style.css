@@ -1,9 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 body 				{font-family: Raleway, Arial, Helvetica, sans-serif, Source Sans Pro, Verdana;
 					}
 
 #HOME				{
 					height: 920px;
 					padding-bottom: 10px;
+					text-align: center;
 					}
 
 #ABOUT				{height: 940px;
@@ -175,15 +180,29 @@ footer				{position:bottom;
 			margin: 0 auto 20px auto;
 			border-color:black;
 			}
-		
+
+.col3  {
+	width: auto;
+	float: left;
+	margin-left:250px;
+	visibility: visible;
+	animation-delay: 0.9s;
+	animation-name: fadeInUp;}
+
+	.col3-1  {
+	width: auto;
+	float: left;
+	margin-left:470px;
+	margin-top:-50px;
+	visibility: visible;
+	animation-delay: 0.9s;
+	animation-name: fadeInUp;}
+
 /* Add styles to the form container */
 .col2  {
 	width: 35%;
 	float: left;
-	border-radius: 10px;
-	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4), 0 8px 22px 0 rgba(0, 0, 0, 0.21);
-	padding: 5px;
-	margin-left:500px;
+	margin-left:610px;
 	visibility: visible;
 	animation-delay: 0.9s;
 	animation-name: fadeInUp;}
