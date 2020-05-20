@@ -1,191 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Using A Mate -->
-	<meta charset="UTF-8">
-	<!-- End -->
-	<title>Sibusiso Mashinini</title>
-	<!-- Add A CSS Hyperlink -->
-	<link href="css/style.css" rel="stylesheet">
-	<!-- End -->
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
- 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-	<link rel="icon" type="image/ico" href="images/smi.jpg" />
+<title>Sibusiso Mashinini</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/ico" href="images/smi.jpg" />
+<link rel="stylesheet" href="css/structure.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/fonts.css">
 <style>
+body,h1,h2,h3,h4,h5 {font-family: Raleway, cursive, segoe ui, Arial, Helvetica, sans-serif, Source Sans Pro, Verdana;}
 
-.h 	{
-  text-align: center;
-} 
-
-.navbar {
-  width: 98%;
-  position: fixed;
-  z-index:999;
-}
-
-.navbar > .navbar-header {
-  display: inline;
-}
-
-.navbar > .navbar-header > .navbar-title {
-  display: inline-block;
-  font-size: 22px;
-  color: gray;
-  padding: 10px 10px 10px 10px;
-}
-
-.navbar > .navbar-btn {
-  display: none;
-}
-
-.navbar > .navbar-links {
-  display: inline;
-  float: right;
-  font-size: 17px;
-}
-
-.navbar > .navbar-links > a {
-  display: inline-block;
-  padding: 14px 13px;
-  text-decoration: none;
-  color: #b4a892;
-}
-
-.navbar > .navbar-links > a:hover {
-  transition: all 0.4s ease-in-out;
-  color: #333;
-}
-
-.navbar > #navbar-check {
-  display: none;
-}
-
-.navbar a.active {
-  background-color: #6D9C91;
-  color: white;
-  transition: all 0.4s ease-in-out;
-}
-
-@media (max-width:750px) {
-  .navbar > .navbar-btn {
-    display: inline-block;
-    position: absolute;
-    overflow: hidden;
-    right: 0px;
-    top: 0px;
-  }
-  .navbar > .navbar-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-
-  .navbar > .navbar-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  .navbar > .navbar-links {
-    position: absolute;
-    display: block;
-    width: 99.8%;
-    opacity: 0.9;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-  }
-  .navbar > .navbar-links > a {
-    display: block;
-    width: 99.8%;
-  }
-  .navbar > #navbar-check:not(:checked) + .navbar-links {
-    height: 0px;
-  }
-  .navbar > #navbar-check:checked + .navbar-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
-
-  .col3  {
-  width: auto;
-  float: left;
-  margin-left:40px;
-  visibility: visible;
-  animation-delay: 0.9s;
-  animation-name: fadeInUp;}
-
-  .col3-1  {
-  width: auto;
-  float: left;
-  margin-left:150px;
-  visibility: visible;
-  animation-delay: 0.9s;
-  animation-name: fadeInUp;}
-
-/* Add styles to the form container */
-.col2  {
-  width: 25%;
-  float: left;
-  text-align: center;
-  margin-left:275px;
-  visibility: visible;
-  animation-delay: 0.9s;
-  animation-name: fadeInUp;}
-
-  .col-1  {
-      float: left;
-        width: 45%;
-  }
-  .col-101  {
-      width: 80%;
-      padding: auto;
-      margin: auto;
-      clear: both;
-  }
-
-  .col-101 > .col-1 {
-  padding: 0 25px;
-      margin-left:50px; 
+section {
+  display: flex;
 }
 
 
-}
-
-
-#myGif		{background-image:url('my gif/home page.gif');
-			height: 100%; 
-			width: 100%;
-			background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			opacity:0.9;
-}
-
-#myBp		{background-image:url('images/whole_network15.png');
-			height: 100%; 
-			width: 100%;
-			background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			opacity:1;
-}
-
-#myPp		{background-image:url('images/whole_network16.png');
-			height: 100%; 
-			width: 100%;
-			background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			opacity:1;
+#myGif    {
+      background-image:url('my gif/home page.gif');
+      height: 100%; 
+      width: 100%;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity:0.9;
 }
 
 #myGif, #caption {    
@@ -194,489 +31,221 @@
     animation-name: zoom;
     animation-duration: 0.6s;
 }
-
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-}
-
-.col-1 {
-  position: relative;
-  width: 50%;
-}
-
-.photo {
-  display: block;
-  width: 75%;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 4%;
-  right: 0;
-  background-color: #000;
-  overflow: hidden;
-  width: 92%;
-  height: 100%;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-  border-radius:5%;
-  
-}
-
-.col-1:hover .overlay {
-  opacity: 0.9;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.txt {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.txts {
-  color: #fff;
-  background-color: #000;
-  border: #b4a892 1px solid;
-  padding: 5px 10px;
-  text-decoration: none;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.txts:hover {
-  color: #000;
-  background-color: #fff;
-  transition: all 0.4s ease-in-out;
-}
-
-button 		{
-	color: #fff;
-  background-color: #000;
-  border: #b4a892 1px solid;
-  padding: 5px 10px;
-  text-decoration: none;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-button:hover {
-  color: #000;
-  background-color: #fff;
-  transition: all 0.4s ease-in-out;
-}
-
-.col-1	{
-			float: left;
-  			width: 45%;
-}
-.col-101	{
-			width: 80%;
-			padding: auto;
-			margin: auto;
-			clear: both;
-			
-}
-
-.col-101 > .col-1 {
-  padding: 0 25px;
-      margin-left:50px; 
-}
-
-.col-101:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media (max-width:750px) {
-.h 	{
-	font-size: 27px;
-  text-align: center;
-}
-
-.h-4 	{
-	font-size: 20px;
-}
-
-.h-5	{
-	font-size: 15px;
-}
-
-.h-footer	{
-	font-size: 10px;
-}
-
-.col-1 {
-  position: relative;
-  width: 50%;
-}
-
-.covericons:after	{
-			width: 95%;
-			padding: auto;
-			margin: auto;
-}
-
-.navicons	{
-			width: 25%;
-			float: left;		
-}
-
-.covericons > .navicons {
-  padding: 0 30px;
-}
-
-.photo {
-  display: block;
-  width: 75%;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 4%;
-  right: 0;
-  background-color: #000;
-  overflow: hidden;
-  width: 92%;
-  height: 100%;
-  font-size: 7px;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-  border-radius:5%;
-  
-}
-
-.col-1:hover .overlay {
-  opacity: 0.9;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.txt {
-  color: white;
-  font-size: 13px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.txts {
-  color: #fff;
-  background-color: #000;
-  font-size: 7px;
-  border: #b4a892 1px solid;
-  padding: 5px 10px;
-  text-decoration: none;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.txts:hover {
-  color: #000;
-  background-color: #fff;
-  transition: all 0.4s ease-in-out;
-}
-
-button 		{
-	color: #fff;
-  background-color: #000;
-  border: #b4a892 1px solid;
-  padding: 5px 10px;
-  text-decoration: none;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-button:hover {
-  color: #000;
-  background-color: #fff;
-  transition: all 0.4s ease-in-out;
-}
-
-.col-1	{
-			float: left;
-  			width: 45%;
-}
-.col-101	{
-			width: 80%;
-			padding: auto;
-			margin: auto;
-			clear: both;
-			
-}
-
-.col-101 > .col-1 {
-  padding: 0 25px;
-}
-
-.col-101:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-}
-
-.scrolling-box {
-  display: block;
-  height: 895px;/* 710px */
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  width: 100%;
-}
-
-section {
-  display: flex;
-  padding-top: 350px;
-}
-
 </style>
-</head>
 <body>
-	<div class="scrolling-box">
-		<div id="myGif">
-			<!--creating a navigation container-->
-			<div class="navbar">
-  				<div class="navbar-btn">
-    				<label for="navbar-check">
-      					<span></span>
-      					<span></span>
-      					<span></span>
-    				</label>
-  				</div>
-  			<input type="checkbox" id="navbar-check">
-  				<div class="navbar-links">
-    				<a href="#HOME">HOME</a> 
-    				<a href="#ABOUT">ABOUT</a>
-					<a href="#PROFILE">PROFILE</a>
-					<a href="#CONTACTS">CONTACTS</a>
-					<a href="#TOOLS">TOOLS</a>
-  				</div>
-			</div>
-			<!-- End -->
-	
-			<!-- Home Section -->
-			<section id="HOME"><a id="active"></a>
-				<div class="clear">
-          <div class="col3-1">
-					 <h3 class="h">WELCOME TO MY PORTFOLIO</h3>
-					 <h2 class="h">Hello, I'm Sibusiso.</h2>
-				  </div>
-        </div>
-			</section>
-		</div>
-		<!-- End -->
-	
-		<div id="myBp">
-			<!-- About Section -->
-			<section id="ABOUT">
-				<div class="clear">
-          <div class="col3">
-          <br><br><br><br><br>
-					<div class="hr1">
-						<hr>
-					</div>
-						<br><br>
-					<h4 class="h-4"><p><b>Freelance Web Designer</b> & <b>Front-End Developer</b> <br>based in Gauteng, South Africa.<br>I love building sites from start to finish<br> and enjoy bringing ideas to life in the browser.<br> I can help you build your next product. </p>
-					</h4>
 
-					<!-- Inserting Home Image -->
-					<center><div class="image"><img src="images/IMG-20160706-WA0011.jpg" style="width:20%; height:33%; border-radius:60%;"></div></center>
-		      <br><br><br><br><br>
-					<div class="hr1">
-						<hr>
-					</div>
-          </div>
-				</div>
-				<!-- End -->
-			</section>
-			<!-- End -->
-		</div>
-
-		<div id="myPp">
-			<!-- Profile Section -->
-			<section id="PROFILE">
-				<div class="clear">
-          <br><br><br><br><br><br>
-					<div class="hr2">
-						<hr>
-					</div>
-					<br><br><br><br><br>
-					<div class="col-101">
-						<div class="col-1">
-  							<img src="logo/tablet.png" alt="Leviticus Photography" class="photo" style="width: 100%;">
-  							<div class="overlay">
-    							<div class="txt">Leviticus Photography</div>
-    								<a href="https://leviticusphotography.tk/" class="txts" target="_blank">View Project</a>
-  							</div>
-						</div>
-						<div class="col-1">
-  							<img src="logo/LP add.png" alt="Leviticus Pizza" class="photo" style="width: 100%;">
-  							<div class="overlay">
-    							<div class="txt">Leviticus Pizza</div>
-								<button class="txts" target="_blank" class="mybutton" onClick="myFunctions()" id="myFunction">View Project</button><br><br>
-  							</div>
-						</div>
-					</div>
-					<div class="clear">
-						<br><br><br><br><br>
-					</div>
-					<div class="clear">
-						<div class="hr2">
-							<hr>
-						</div>
-					</div>
-					<div class="clear">
-						<br><br><br><br><br>
-					</div>
-				</div>
-			</section>
-		</div>
-		<!-- End -->
-
-		<div id="myBp">
-			<!-- Contact Section -->
-			<section id="CONTACTS">
-				<div class="clear">
-          <div class="col2">
-            <br><br><br><br><br>
-					   <div class="hr1">
-						  <hr>
-					   </div>
-						<br><br><br><br>
-					<form>
-						<h5 class="h-5">	
-							— Address —<br>
-							<a href="https://goo.gl/maps/2k86QNNmxwN2" target="_blank">17227 Adagio Street<br>Braamfischervill Phase 4<br>1875</a><br><br>
-							— Call —<br>
-							078 850 8156<br>
- 							<br>
-							— Email —<br>
-							<a href="mailto:leviticusphotograpy02@outlook.com" target="_blank">sibusisomashinini@outlook.com</a>
-						</h5> 
-					</form>
-					<div class="clear">
-						<br><br><br><br><br>
-						<div class="hr1">
-							<hr>
-						</div>
-					</div>
-          </div>
-				</div>
-			</section>
-			<!-- End -->
-		</div>
-		<div class="clear"></div>
-    
-		<!-- Tools Section -->
-    <div id="myPp">
-		<section id="TOOLS">
-			<div class="clear">
-        <br><br><br><br><br><br>
-				<div class="hr1">
-					<hr>
-				</div>
-					<br><br>
-				<div class="covericons" style="margin-bottom: 10%; margin-top: 3%; margin-left: 15%;">
-					<div class="navicons" style="margin-left: 15%;">
-						<img id="myImg" src="my logos/HTML_Logo.png" width="67%">
-					</div>
-					<div class="navicons">
-						<img id="myImg" src="my logos/CSS 3.png" width="50%">
-					</div>
-					<div class="navicons">
-						<img id="myImg" src="my logos/JavaScript-logo.png" width="63%">
-					</div>
-				</div>
-					<br><br>
-				<div class="covericons" style="margin-bottom: 15%; margin-top: 7%; margin-left: 35%;">
-					<div class="navicons">
-						<img id="myImg" src="my logos/python-logo.png" style="width:100%; ">
-					</div>
-					<div class="navicons">
-						<img id="myImg" src="my logos/PHP-logo.png" style="width:200%;">
-					</div>
-				</div>
-					<br><br><br><br><br><br><br><br>
-				<div class="hr1">
-					<hr>
-				</div>
-					<br>
-			</div>
-		</section>
+  <!-- Body -->
+<div class="w3-row">
+<div id="myGif">
+ <div class="navbar">
+  <div class="navbar-header">
+    <div class="navbar-title" style="font-family: Centaur; color: #b4a892;" >
+      SIBUSISO MASHININI
+    </div>
   </div>
-		<!-- End -->
-		<!-- Creating Social Media Icornbar-->
-		<div class="clear">
-			<br>
-			<div class="iconbar">
-				<div class="sicons">
-					<a href="0611976816"> <img src="logo/md_5a97a30b8a950.jpg" width="3%" target="_blank"></a>
-					<a href="https://www.facebook.com/twentyfirst.centurionsvibe/"><img src="logo/circle-facebook_318-10967.jpg" width="3%" target="_blank"></a>
-					<a href="https://www.instagram.com/sbudar_24/"><img src="logo/images.png" width="3%" target="_blank"></a>
-					<a href="https://twitter.com/Sbudar_24"><img src="logo/social-twitter-in-acircle-logo_318-28676.jpg" width="3%" target="_blank"></a>
-					<a href="mailto:sibusisomashinini@outlook.com"><img src="logo/gmail.png" width="3%" target="_blank"></a>
-				</div>
-			</div>
-		</div>
-		<!-- End -->
-		<!-- Creating The Footer -->
-		<footer class="h-footer">&copy;2018 designed by <i>S. M Web Studio</i></footer>
-	</div>
-	<!-- End -->
-<script type="text/javascript" src="js/materialize.min.js"></script>
-<script>
+  <div class="navbar-btn">
+    <label for="navbar-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <input type="checkbox" id="navbar-check">
+  <div class="navbar-links">
+    <a href="#HOME">HOME</a> 
+    <a href="#WHAT I DO">WHAT I DO</a>
+    <a href="#ABOUT">ABOUT</a>
+    <a href="#PROJECTS">PROJECTS</a>
+    <a href="#TOOLS">TOOLS</a>
+    <a href="#Bottom">CONTACTS</a>
+  </div>
+</div>
 
+  <!-- Home entry -->
+<section id="HOME"><a id="active"></a>
+<div class="w3-col s12 w3-margin">
+  <br><br><br>
+  <div class="w3-margin">
+    <div class="w3-container">
+      <h1 style="font-size: 75pt; font-family: Raleway;"><br> SIBUSISO MASHININI</h1>
+      <h3 style="font-size: 25pt; text-align: center;">WELCOME TO MY PORTFOLIO</h3>
+    </div>
+  </div>
+  <div class="w3-margin">
+    <div class="w3-container">
+      <h4 style="color: gray">— MY PROFILE —</h4>
+    <p>
+      <b>— —</b><br>
+      <b>Freelance Web Designer</b><br>
+      <b>Full Stack Developer</b><br>
+      <b>— —</b><br>
+    </p>
+  </div>
+</div>
+</div>
+</section>
+<!-- End Home -->
+
+<!-- What I do entry -->
+<section id="WHAT I DO">
+<div class="w3-col l8 s12 w3-margin">
+  <div class="w3-margin">        
+    <div class="w3-container" style="color: #b4a892;">
+      <h3><b>WHAT I DO</b></h3>
+    </div>
+    <div class="w3-container">
+      <h1 style="font-size: 75pt; font-family: cursive;"><i>I create things<br> you love.</i></h1>
+    </div>
+  </div>
+  <div class="w3-col l4 w3-margin">  
+
+  <!-- Social block -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4 style="color: gray">Follow Me</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable">
+      <li class="w3-padding-16" href="https://www.facebook.com/twentyfirst.centurionsvibe/">
+         <a style="text-decoration: none;" href="https://www.facebook.com/twentyfirst.centurionsvibe/"><img src="logo/social-facebook-circle-512.png" alt="Facebook Logo" class="w3-left w3-margin-right" style="width:35px">
+        <span class="w3-large" style="color: gray"> Facebook</span></a><br>
+      </li>
+      <li class="w3-padding-16" href="https://www.instagram.com/sbudar_24/">
+        <a style="text-decoration: none;" href="https://www.instagram.com/sbudar_24/"><img src="logo/social-instagram-new-circle-512.png" alt="Instagram Logo" class="w3-left w3-margin-right" style="width:35px">
+        <span class="w3-large" style="color: gray">Instagram</span></a><br>
+      </li> 
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small" href="https://twitter.com/Sbudar_24/">
+        <a href="https://twitter.com/Sbudar_24/"><img src="logo/twitter_circle-512.png" alt="Twitter Logo" class="w3-left w3-margin-right" style="width:35px"></a>
+        <a style="text-decoration: none;" href="https://twitter.com/Sbudar_24/">
+          <span class="w3-large" style="color: gray">Twitter</span></a><br>
+      </li>  
+    </ul>
+  </div>
+<!-- End Social block -->
+</div>
+</div>
+</section>
+<!-- End What I do -->
+
+<!-- About entry -->
+  <section id="ABOUT">
+  <div class="w3-col l8">
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4></h4>
+    </div>
+    <div class="w3-container w3-margin">
+      <img src="images/0519081629.png" alt="My photo" style="width:73%; margin-left: 5%; opacity: 0.9; border-radius:20%;">
+    </div>
+    </div>
+  </div>
+  <div class="w3-margin">
+    <div class="w3-container w3-margin" style="color: #b4a892">
+      <h3></h3>
+    </div>
+    <div class="w3-container" style="color: gainsboro">
+      <h3><b>ABOUT</b></h3>
+      <h4>— HELLO —</h4><br><p>I'm <b>Sibusiso Mashinini.</b><br>I Love What I Do.<br><br> <b>Freelance Web Designer</b> & <b>Front-End Developer</b> <br>based in Gauteng, South Africa.<br>I love building sites from start to finish<br> and enjoy bringing ideas to life in the browser.<br> I can help you build your next product. <br><br>Welcome on board!</p>
+      <h5>By Sibusiso Mashinini, <span class="w3-opacity">Apr 24, 1996</span></h5>
+    </div>
+  </div>
+</section>
+<!-- End About -->
+
+<!-- Product entry -->
+  <section id="PROJECTS">
+  <div class="w3-margin">
+    <div class="w3-container w3-margin" style="color: #b4a892; float: right;">
+      <h3><b>PROJECTS</b></h3>
+    </div>
+          <div class="col-101">
+            <div class="col-1">
+                <img src="logo/08674531467898654.png" alt="Leviticus Photography" class="photo" style="width: 100%;">
+                <div class="overlay">
+                  <div class="txt">Leviticus Photography</div>
+                    <a href="https://leviticusphotography.tk/" class="txts" target="_blank">View Project</a>
+                </div>
+            </div>
+            <div class="col-1">
+                <img src="logo/1287530876.png" alt="Leviticus Pizza" class="photo" style="width: 100%;">
+                <div class="overlay">
+                  <div class="txt">Leviticus Pizza</div>
+                <button class="txts" target="_blank" class="mybutton" onClick="myFunctions()" id="myFunction">View Project</button><br><br>
+                </div>
+            </div>
+            <div class="w3-card w3-margin">
+              <div class="w3-container w3-margin">
+                <h1><b></b></h1>
+              </div>
+            </div>
+          </div>
+  </div>
+</section>
+<!-- END Product -->
+
+<!-- Tools entry -->
+  <section id="TOOLS">
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-margin" style="color: #b4a892">
+      <h3><b>TOOLS</b></h3>
+    </div>
+        <div class="covericons" style="margin-bottom: 10%; margin-top: 3%;">
+          <div class="navicons" style="margin-left: 15%;">
+            <img id="myImg" src="my logos/HTML_Logo.png" alt="HTML Logo" width="67%">
+          </div>
+          <div class="navicons">
+            <img id="myImg" src="my logos/CSS 3.png" alt="CSS Logo" width="50%">
+          </div>
+          <div class="navicons">
+            <img id="myImg" src="my logos/JavaScript-logo.png" alt="JAVASCRIPT Logo" width="63%">
+          </div>
+        </div>
+          <br><br>
+        <div class="covericons" style="margin-bottom: 15%; margin-top: 7%; margin-left: 30%;">
+          <div class="navicons">
+            <img id="myImg" src="my logos/python-logo.png" alt="Python Logo" style="width:90%; ">
+          </div>
+          <div class="navicons">
+            <img id="myImg" src="my logos/PHP-logo.png" alt="PHP Logo" style="width:155%;">
+          </div>
+      <div class="w3-card w3-margin">
+        <div class="w3-container w3-margin">
+          <h1><b></b></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END tools -->
+</div>
+</div>
+<!-- END Body -->
+
+<br>
+<div class="clear"></div>
+<!-- Contact entry -->
+  <section id="Bottom"><div class="col-0">
+        <div class="w3-container" style="color: #b4a892">
+      <h3><b>CONTACTS</b></h3>
+    </div>
+    <div class="iconbar">
+      <div class="sicons"><br>
+        <a href="https://twitter.com/Sbudar_24"><img src="logo/social-twitter-in-acircle-logo_318-28676.jpg" alt="Twitter Logo" target="_blank" width="6%"></a> Twitter<br><br>
+        <a href="https://www.facebook.com/twentyfirst.centurionsvibe/"><img src="logo/circle-facebook_318-10967.jpg" alt="Facebook Logo" target="_blank" width="6%"></a>  Facebook<br><br>
+        <a href="https://www.instagram.com/sbudar_24/"><img src="logo/web-user-interface_46-512.png" alt="Instagram Logo" target="_blank" width="6%"></a> Instagram
+        </div>
+        </div>
+        </div>
+      <br>
+<div class="clear"></div>
+<!-- Footer -->
+<footer>        
+  <div class="w3-container">
+      <h3><b></b></h3>
+    </div><br><br><img src="logo/md_5a97a30b8a950.jpg" target="_blank" width="4%"> Let's Talk (+27)78 850 8156<br><br><a href="mailto:sibusisomashinini@outlook.com"><img src="logo/gmail.png" width="4%" target="_blank"></a> sibusisomshinini@outlook.com<br><br>&copy;2020 designed by <i>S. M Web Studio</i><br></footer>
+<!-- END Footer -->
+  </section>
+<!-- END Contact -->
+<script>
 window.onscroll = function() {myFunction()};
 
 var navbar = document.getElementById("navbar");
